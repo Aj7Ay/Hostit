@@ -23,7 +23,10 @@ docker volume create nexus-data
 2. Start Nexus container with volume:
 
 docker run -d --name nexus -p 8081:8081 --mount source=nexus-data,target=/nexus-data sonatype/nexus3
-3. Login to Nexus UI at http://your-ip:8081 and create a Docker hosted repo called "docker-private" 4. Stop and remove the Nexus container:
+
+3. Login to Nexus UI at http://your-ip:8081 and create a Docker hosted repo called "docker-private"
+
+4. Stop and remove the Nexus container:
 
 docker stop nexus
 docker rm nexus
